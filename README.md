@@ -13,7 +13,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-  - [📝 IRB](#schema-diagram)
+  - [📝 IRB](#irb)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -40,7 +40,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 In addition to creating the data structure, SQL queries were required to answer specific questions.
 
-## 🛠 Schema Diagram <a name="schema-diagram"></a>
+## 🛠 Schema Diagram <a name="irb"></a>
 
 ![morse](https://github.com/MarcoDiaz2000/decode-a-morse-code-message/assets/125866339/05a8ae81-dbe6-40f5-aff5-05620f7e8711)
 
