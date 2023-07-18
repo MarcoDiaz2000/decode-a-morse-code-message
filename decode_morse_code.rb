@@ -6,7 +6,7 @@ CODE = { ".-" => "A", "-..." => "B", "-.-." => "C", "-.." => "D", "." => "E",
   "..---" => "2", "...--" => "3", "....-" => "4", "....." => "5", "-...." => "6",
   "--..." => "7", "---.." => "8", "----." => "9" }
 
-  def decode(message)
+def decode(message)
   words = message.split('   ')
   decoded_words = words.map do |word|
     morse_chars = word.split(' ')
@@ -20,4 +20,3 @@ end
 puts decode("-- -.--   -. .- -- .")
 
 puts decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
-
