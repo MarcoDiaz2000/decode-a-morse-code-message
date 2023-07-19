@@ -6,17 +6,23 @@ CODE = { ".-" => "A", "-..." => "B", "-.-." => "C", "-.." => "D", "." => "E",
   "..---" => "2", "...--" => "3", "....-" => "4", "....." => "5", "-...." => "6",
   "--..." => "7", "---.." => "8", "----." => "9" }
 
-def decode(message)
-  words = message.split('   ')
-  decoded_words = words.map do |word|
-    morse_chars = word.split(' ')
-    decoded_chars = morse_chars.map { |char| CODE[char] }
-    decoded_chars.join
-  end
-  decoded_message = decoded_words.join(' ')
-  return decoded_message
+def decode_char(morse_char)
+  CODE[morse_char]
 end
 
-puts decode("-- -.--   -. .- -- .")
+def decode_word(morse_word)
+  morse_chars = morse_word.split(' ')
+  decoded_chars = morse_chars.map { |char| decode_char(char) }
+  decoded_chars.join
+end
 
-puts decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+def decode_message(morse_message)
+  words = morse_message.split('   ')
+  decoded_words = words.map do |word|
+    decode_word(word)
+  end
+  decoded_words.join(' ')
+end
+
+puts decode_message("-- -.--   -. .- -- .")
+puts decode_message(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
